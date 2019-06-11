@@ -1,0 +1,36 @@
+.page-footer {
+  .container();
+  .content-padding();
+  text-align: center;
+  padding-bottom: 20px;
+
+  &__hash-tag {
+    .font-btn();
+    font-weight: bold;
+    color: black;
+    margin-bottom: 38px;
+  }
+
+  @media @tablet-widths {
+    .flex();
+    justify-content: space-between;
+    align-items: center;
+    .content-padding--desktop();
+
+    &__hash-tag {
+      display: flex;
+      justify-content: flex-start;
+      .font-title--desktop();
+      min-width: 256px;
+      padding-left: 60px;
+      margin-bottom: 0;
+      box-sizing: border-box;
+    }
+  }
+
+  @media @desktop-widths {
+    &__hash-tag {
+      padding-left: 132px;
+    }
+  }
+}

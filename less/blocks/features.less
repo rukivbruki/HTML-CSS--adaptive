@@ -1,0 +1,129 @@
+.features {
+  .container();
+
+  &__wrap {
+    text-align: center;
+    padding: 60px 20px 40px 20px;
+    background-color: @main-bg;
+
+    @media @mobile-widths-only {
+      background: url("../img/bg-triangle.svg") no-repeat;
+      background-color: @main-bg;
+      background-size: 320px auto;
+      background-position: top;
+    }
+  }
+
+  &__wrap--reverse {
+    padding: 22px 20px 40px 20px;
+    background: none;
+    background-color: @main-bg;
+  }
+
+  &__title {
+    .font-title();
+    color: @white-color;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+
+  &__title br,
+  &__description br {
+    display: none;
+  }
+
+  &__description,
+  &__wrap span {
+    .font-text();
+    line-height: 21px;
+    color: @white-color;
+  }
+
+  &__description {
+    margin-bottom: 45px;
+    margin-top: 14px;
+  }
+
+  &__wrap span {
+    line-height: 24px;
+  }
+
+  &__wrap p {
+    margin-bottom: 0;
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media @tablet-widths {
+    .flex();
+
+    &__wrap {
+      width: 256px;
+      padding: 44px 45px 45px 45px;
+      box-sizing: border-box;
+    }
+
+    &__wrap--reverse {
+      order: 1;
+    }
+
+    &__wrap span {
+      line-height: 21px;
+    }
+
+    &__wrap p {
+      margin-top: 22px;
+    }
+
+    &__title {
+      .font-title--desktop();
+      color: @white-color;
+      margin-bottom: 11px;
+      margin-top: 0;
+    }
+
+    &__title br {
+      display: block;
+    }
+
+    &__description {
+      margin-top: 20px;
+    }
+
+    &__img {
+      width: 512px;
+      height: 256px;
+    }
+  }
+
+  @media @desktop-widths {
+    max-height: 256px;
+    overflow: hidden;
+
+    &__wrap {
+      width: 400px;
+      padding: 50px 64px;
+      box-sizing: border-box;
+    }
+
+    &__img {
+      position: relative;
+      top: -69px;
+      width: 800px;
+      height: 400px;
+    }
+
+    &__img--reverse {
+      top: -75px;
+    }
+
+    &__title {
+      margin: 0;
+      padding: 2px 60px 10px 60px;
+    }
+  }
+}

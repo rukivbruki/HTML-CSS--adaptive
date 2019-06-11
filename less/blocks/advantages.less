@@ -1,0 +1,81 @@
+.advantages {
+  .container();
+  background-color: @additional-bg;
+
+  &__title {
+    .font-title();
+    margin-top: 0;
+    margin-bottom: 9px;
+  }
+
+  &__title br {
+    display: none;
+  }
+
+  &__description:last-child {
+    margin-bottom: 0;
+  }
+
+  &__description,
+  &__item span {
+    .font-text();
+    color: @black-color;
+    line-height: 21px;
+    margin-top: 16px;
+  }
+
+  &__item {
+    text-align: center;
+    padding: 25px 35px 30px 35px;
+  }
+
+  @media @tablet-widths {
+    .flex();
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .content-padding--desktop();
+    padding: 0;
+    margin-bottom: 29px;
+
+    &__title {
+      .font-title--desktop();
+      margin-bottom: 10px;
+    }
+
+    &__item {
+      width: 256px;
+      padding: 42px 48px 45px 48px;
+      box-sizing: border-box;
+    }
+
+    &__item:nth-child(2) {
+      padding: 44px 55px 45px 55px;
+    }
+
+    &__description:last-child {
+      margin-top: 22px;
+    }
+  }
+
+  @media @desktop-widths {
+    margin-bottom: 30px;
+
+    &__item {
+      width: 400px;
+      padding: 45px 55px 65px 55px;
+      box-sizing: border-box;
+    }
+
+    &__item:nth-child(2) {
+      padding: 45px 65px 65px 65px;
+    }
+
+    &__title {
+      padding: 0 60px;
+    }
+
+    &__title br {
+      display: block;
+    }
+  }
+}

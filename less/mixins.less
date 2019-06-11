@@ -1,0 +1,43 @@
+.container() {
+  width: 320px;
+  margin: 0 auto;
+
+  @media @tablet-widths {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  @media @desktop-widths {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.flex() {
+  display: flex;
+}
+
+.content-padding() {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.content-padding--desktop() {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.separator() {
+  border-bottom: 1px solid #e5e5e5;
+}

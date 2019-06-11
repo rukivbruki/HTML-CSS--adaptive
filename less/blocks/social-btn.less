@@ -1,0 +1,61 @@
+.social-btn {
+  .container();
+  .flex();
+  justify-content: center;
+  margin-bottom: 38px;
+
+  &__link {
+    .flex();
+    width: 46px;
+    height: 48px;
+    background-color: @main-bg;
+    margin-right: 7px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link:hover {
+    background: #669ec0;
+  }
+
+  &__link:active {
+    background: #5496bd;
+  }
+
+  &__link:active svg {
+    fill: #88b6d1;
+  }
+
+  &__link:last-child {
+    margin-right: 0;
+  }
+
+  &__link svg {
+    fill: @white-color;
+  }
+
+  &__link--fb svg {
+    width: 8.672px;
+  }
+
+  &__link--youtube svg {
+    width: 19.979px;
+  }
+
+  &__link--twitter svg {
+    width: 17.5px;
+  }
+
+  @media @tablet-widths {
+    min-width: 256px;
+    margin-bottom: 0;
+
+    &__link:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @media @desktop-widths {
+    margin-left: 156px;
+  }
+}

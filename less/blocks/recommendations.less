@@ -1,0 +1,154 @@
+.recommendations {
+  .container();
+  padding: 0 20px 0 20px;
+  text-align: left;
+  padding-top: 17px;
+  margin-bottom: 38px;
+  box-sizing: border-box;
+
+  &__title {
+    .font-title();
+    margin-bottom: 15px;
+  }
+
+  &__description {
+    .font-text();
+    margin-bottom: 28px;
+    line-height: 21px;
+  }
+
+  &__description br {
+    display: none;
+  }
+
+  &__wrap {
+    padding-left: 50px;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item::before {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 50px;
+  }
+
+  &__item--home::before {
+    background: url("../img/icon-house.svg") no-repeat;
+    background-color: white;
+    left: -50px;
+    top: -10px;
+    background-size: auto 38px;
+  }
+
+  &__item--gifts::before {
+    background: url("../img/icon-gift.svg") no-repeat;
+    background-color: white;
+    left: -45px;
+    top: -12px;
+    background-size: auto 40px;
+  }
+
+  &__item--food::before {
+    background: url("../img/icon-burger.svg") no-repeat;
+    background-color: white;
+    background-size: auto 36px;
+    left: -52px;
+    top: -6px;
+  }
+
+  @media @tablet-widths {
+    .content-padding--desktop();
+    padding: 0;
+    margin-bottom: 8px;
+
+    &__title {
+      .font-title--desktop();
+      margin: 0 0 23px 0;
+    }
+
+    &__wrap {
+      .flex();
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .content-padding--desktop();
+    }
+
+    &__item {
+      .flex();
+      flex-wrap: wrap;
+      width: 256px;
+      justify-content: center;
+      padding: 157px 45px 55px 45px;
+      box-sizing: border-box;
+    }
+
+    &__item p {
+      text-align: center;
+      margin: 0;
+    }
+
+    &__item--home::before {
+      background-size: 75px 72px;
+      left: 90px;
+      top: 60px;
+      width: 80px;
+      height: 80px;
+    }
+
+    &__item--gifts {
+      order: 2;
+    }
+
+    &__item--gifts::before {
+      background-size: 64px 75px;
+      left: 91px;
+      top: 57px;
+      width: 80px;
+      height: 80px;
+    }
+
+    &__item--food {
+      order: 1;
+      padding: 157px 52px 55px 52px;
+    }
+
+    &__item--food::before {
+      background-size: 77px 68px;
+      left: 92px;
+      top: 62px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  @media @desktop-widths {
+    &__item {
+      width: 400px;
+      padding: 159px 50px 74px 50px;
+    }
+
+    &__item--home::before {
+      left: 165px;
+    }
+
+    &__item--gifts::before {
+      left: 165px;
+    }
+
+    &__item--food::before {
+      left: 165px;
+    }
+
+    &__title {
+      margin: 0 0 21px 0;
+    }
+
+    &__description br {
+      display: block;
+    }
+  }
+}

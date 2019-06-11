@@ -1,0 +1,36 @@
+.copyright {
+  .container();
+  .flex();
+  .font-text();
+  align-items: center;
+  justify-content: center;
+
+  span {
+    margin-right: 12px;
+  }
+
+  &__link {
+    height: 34px;
+  }
+
+  &__link:hover path {
+    fill: #81b3d2;
+  }
+
+  &__link:active path {
+    fill: #000000;
+    opacity: 0.3;
+  }
+
+  @media @tablet-widths {
+    min-width: 256px;
+    justify-content: flex-end;
+    padding-right: 60px;
+    line-height: 26px;
+    box-sizing: border-box;
+  }
+
+  @media @desktop-widths {
+    padding-right: 45px;
+  }
+}
